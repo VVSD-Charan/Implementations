@@ -1,7 +1,19 @@
 //vvsdc
 
+// Problem statement
+// Given a tree having n nodes (1 based indexing) rooted at 1 and q queries each having two inputs a and b. 
+//Find if a is ancestor of b or not
+
+//Constraints
+// 1<= n <= 2*1e5
+// 1<= q <= 2*1e5
 
 // Intuition : 
+// Performing dfs on each query results in TLE since it takes n*q operations ~ 4*1e10 .
+// Better way is to use inTime and outTime in initial DFS traversal . 
+// a is ancestor of b if  inTime[a] < inTime[b] < outTime[b] < outTime[a]
+// We can solve each query in O(1) and initial DFS takes O(n) so overall Time complexity is O(n+q)
+// Space complexity => O(n) recursion stack space for DFS + O(n) for inTime + O(n) for outTime => Overall ~ O(n) 
 
 
 #include <bits/stdc++.h>
