@@ -6,7 +6,7 @@
 class MyHashSet {
 
     vector<list<int>>arr;
-    int max_size = 1e6;
+    int max_size = 100;
 
 public:
     MyHashSet() 
@@ -50,7 +50,7 @@ public:
 class MyHashMap {
 
     vector<list<pair<int,int>>>arr;
-    int max_size = 1e6;
+    int max_size = 100;
 
 public:
     MyHashMap() 
