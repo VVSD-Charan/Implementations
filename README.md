@@ -2,6 +2,7 @@
 
 ### Implementation of HashSet
 
+```
 class MyHashSet {
 
     vector<list<int>>arr;
@@ -41,3 +42,4 @@ public:
         return (search(key,index) != arr[index].end());
     }
 };
+```
