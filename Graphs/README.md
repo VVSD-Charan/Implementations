@@ -1,5 +1,5 @@
-### Finding bridges in graph
-<li>A bridge in a graph is an edge whose removal disconnects the graph or increases disconnected components.</li>
+### Finding bridges (Critical connections) in graph
+<li>A bridge / critical connection in a graph is an edge whose removal disconnects the graph or increases disconnected components.</li>
 <li>We can find all bridges using DFS by using some data structures to identify bridges.</li>
 <li>To identify bridges in graph , we use  : </li>
 <ol>
@@ -8,6 +8,8 @@
     <li>An integer <strong>lowTime</strong> array which keeps track of least reach time adjacent vertices <strong> except parent vertex </strong></li>
 </ol>
 <li>If at any stage , the inTime of current node becomes lesser than lowTime of adjacent node , then it indicates that the edge between them is a bridge. This is because it means that the adjacent node has no way to reach other than current node. If there is a way then the lowTime of that node would have been lesser than or equal to insertion time of current node.</li>
+<strong> Time complexity : O(V + E) => same as normal DFS </strong>
+<strong> Space complexity : O(3 * V) => Three vectors of size V for visited,lowTime and inTime </strong>
 
 ```
     int timer = 0;
