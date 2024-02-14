@@ -8,8 +8,9 @@
     <li>An integer <strong>lowTime</strong> array which keeps track of least reach time adjacent vertices <strong> except parent vertex </strong></li>
 </ol>
 <li>If at any stage , the inTime of current node becomes lesser than lowTime of adjacent node , then it indicates that the edge between them is a bridge. This is because it means that the adjacent node has no way to reach other than current node. If there is a way then the lowTime of that node would have been lesser than or equal to insertion time of current node.</li>
+
 ```
-int timer = 0;
+    int timer = 0;
     
     void getCriticalConnections(vector<int>adj[],vector<bool>&visited,vector<int>&inTime,vector<int>&lowTime,int src,int parent)
     {
