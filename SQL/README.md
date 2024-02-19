@@ -33,7 +33,7 @@ SELECT name FROM Customer WHERE COALESCE(referee_id,0) <> 2;
 
 ```
 </li>
-<br><br>
+<br>
 <li>
 
 Table: Views<br>
