@@ -3,7 +3,7 @@
 
 <ol>
 <li>
-Customer Table : <br><br>
+Customer Table : <br>
 
 Find the names of the customer that are not referred by the customer with id = 2. <br><br>
 
@@ -36,7 +36,7 @@ SELECT name FROM Customer WHERE COALESCE(referee_id,0) <> 2;
 <br><br>
 <li>
 
-Table: Views<br><br>
+Table: Views<br>
 
 Write a solution to find all the authors that viewed at least one of their own articles. Return all those author_ids under column named as id and all these id's must be unique in ascending order. <br><br>
 
