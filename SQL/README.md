@@ -4,13 +4,13 @@
 <ol>
 <li>
 Customer Table :
-+-------------+---------+
-| Column Name | Type    |
-+-------------+---------+
-| id          | int     |
-| name        | varchar |
-| referee_id  | int     |
-+-------------+---------+
++-------------+---------+<br>
+| Column Name | Type    |<br>
++-------------+---------+<br>
+| id          | int     |<br>
+| name        | varchar |<br>
+| referee_id  | int     |<br>
++-------------+---------+<br>
 
 Find the names of the customer that are not referred by the customer with id = 2.
 
