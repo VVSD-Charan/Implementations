@@ -108,5 +108,47 @@ CHAR_LENGTH() returns the length of the string measured in characters. <br>
 
 Using length() works similar to char_length() in most of the cases but in case of UTF-8 , as different characters may take up different bytes , length() will give false results.
 
+</li> <br>
+
+<li>
+
+Write a solution to show the unique ID of each user, If a user does not have a unique ID replace just show null. <br><br>
+
+Table: Employees <br>
+
++---------------+---------+<br>
+| Column Name   | Type    |<br>
++---------------+---------+<br>
+| id            | int     |<br>
+| name          | varchar |<br>
++---------------+---------+<br>
+
+```
+
+select eu.unique_id as unique_id, e.name as name FROM Employees AS e LEFT JOIN EmployeeUNI AS eu ON
+e.id = eu.id;
+
+```
+
+### Types of Outer Joins
+<ol>
+    <li>Left Outer Join</li>
+    <li>Right Outer Join</li>
+    <li>Full Outer Join</li>
+</ol>
+
+### Left outer Join
+
+The left join operation returns all record from left table and matching records from the right table. On a matching element not found in right table, NULL is represented in that case.
+
+### Right outer Join
+
+The right join operation returns all record from right table and matching records from the left table. On a matching element not found in left table, NULL is represented in that case.
+
+### Full outer Join
+
+A full outer join returns all rows from both tables being joined, regardless of whether there is a match or not. If there is no matching value in one of the tables, the result set will still include that row, with NULL values for columns from the other table.
+
+
 </li>
 </ol>
