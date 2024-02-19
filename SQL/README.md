@@ -3,7 +3,7 @@
 
 <ol>
 <li>
-Customer Table :
+Customer Table : <br><br>
 +-------------+---------+<br>
 | Column Name | Type    |<br>
 +-------------+---------+<br>
@@ -31,5 +31,52 @@ The syntax for COALESCE function is COALESCE(column_name , value). If the value 
 SELECT name FROM Customer WHERE COALESCE(referee_id,0) <> 2;
 
 ```
+</li>
+
+<li>
+
+Table: Views<br><br>
+
++---------------+---------+<br>
+| Column Name   | Type    |<br>
++---------------+---------+<br>
+| article_id    | int     |<br>
+| author_id     | int     |<br>
+| viewer_id     | int     |<br>
+| view_date     | date    |<br>
++---------------+---------+<br>
+
+Write a solution to find all the authors that viewed at least one of their own articles. Return all those author_ids under column named as id and all these id's must be unique in ascending order.
+
+```
+
+SELECT DISTINCT author_id AS id from Views WHERE author_id = viewer_id ORDER BY author_id;
+
+```
+
+### Aliasing in sql
+
+SQL aliases are used to give a temporary name to columns of a table or table itself so that the names will be readable. ALIASES exist only during entire duration of query. An alias is created using <strong>AS</strong> keyword.
+
+### DISTINCT in sql
+
+In a table , columns often contain many duplicate values . If we just need unique values , then we can obtain them using the DISTINCT statement. 
+
+Syntax to obtain distinct values is
+
+```
+
+SELECT DISTINCT column_name FROM table_name
+
+```
+
+To count number of distinct values , we can use count
+
+```
+
+SELECT COUNT(DISTINCT column_name) FROM table_name
+
+```
+
 </li>
 </ol>
