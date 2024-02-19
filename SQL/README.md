@@ -102,7 +102,7 @@ SELECT tweet_id FROM Tweets WHERE char_length(content) > 15;
 
 ```
 
-### length vs char_length 
+### length() vs char_length() 
 LENGTH() returns the length of the string measured in bytes. <br>
 CHAR_LENGTH() returns the length of the string measured in characters. <br>
 
