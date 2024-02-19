@@ -80,4 +80,31 @@ SELECT COUNT(DISTINCT column_name) FROM table_name
 ```
 
 </li>
+
+<br>
+
+<li>
+
+Table: Tweets <br>
+
+Write a solution to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15. <br><br>
+
++----------------+---------+<br>
+| Column Name    | Type    |<br>
++----------------+---------+<br>
+| tweet_id       | int     |<br>
+| content        | varchar |<br>
++----------------+---------+<br>
+
+```
+
+SELECT tweet_id FROM Tweets WHERE char_length(content) > 15;
+
+```
+
+### length vs char_length 
+LENGTH() returns the length of the string measured in bytes.
+CHAR_LENGTH() returns the length of the string measured in characters.
+
+</li>
 </ol>
