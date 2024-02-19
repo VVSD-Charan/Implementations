@@ -4,6 +4,9 @@
 <ol>
 <li>
 Customer Table : <br><br>
+
+Find the names of the customer that are not referred by the customer with id = 2. <br><br>
+
 +-------------+---------+<br>
 | Column Name | Type    |<br>
 +-------------+---------+<br>
@@ -11,8 +14,6 @@ Customer Table : <br><br>
 | name        | varchar |<br>
 | referee_id  | int     |<br>
 +-------------+---------+<br>
-
-Find the names of the customer that are not referred by the customer with id = 2.
 
 ```
 
@@ -32,10 +33,12 @@ SELECT name FROM Customer WHERE COALESCE(referee_id,0) <> 2;
 
 ```
 </li>
-
+<br><br>
 <li>
 
 Table: Views<br><br>
+
+Write a solution to find all the authors that viewed at least one of their own articles. Return all those author_ids under column named as id and all these id's must be unique in ascending order. <br><br>
 
 +---------------+---------+<br>
 | Column Name   | Type    |<br>
@@ -45,8 +48,6 @@ Table: Views<br><br>
 | viewer_id     | int     |<br>
 | view_date     | date    |<br>
 +---------------+---------+<br>
-
-Write a solution to find all the authors that viewed at least one of their own articles. Return all those author_ids under column named as id and all these id's must be unique in ascending order.
 
 ```
 
