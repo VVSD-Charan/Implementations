@@ -1,6 +1,8 @@
 
 # SQL queries
 
+<ol>
+<li>
 Customer Table :
 +-------------+---------+
 | Column Name | Type    |
@@ -29,3 +31,5 @@ The syntax for COALESCE function is COALESCE(column_name , value). If the value 
 SELECT name FROM Customer WHERE COALESCE(referee_id,0) <> 2;
 
 ```
+</li>
+</ol>
