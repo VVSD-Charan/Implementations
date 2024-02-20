@@ -276,4 +276,42 @@ It can be of three parameters <br>
 
 </li>
 
+<li>
+
+Write a solution to find the average time each machine takes to complete a process.<br>
+
+The time to complete a process is the 'end' timestamp minus the 'start' timestamp. The average time is calculated by the total time to complete every process on the machine divided by the number of processes that were run. <br>
+
+Table: Activity <br><br>
+
++----------------+---------+<br>
+| Column Name    | Type    |<br>
++----------------+---------+<br>
+| machine_id     | int     |<br>
+| process_id     | int     |<br>
+| activity_type  | enum    |<br>
+| timestamp      | float   |<br>
++----------------+---------+<br><br>
+
+First we need to perform self Join to obtain start time and end time of a process belonging to same machine.
+
+```
+
+FROM Activity as A1 , Activity as A2 WHERE A1.machine_id = A2.machine_id AND A1.process_id = A2.process_id AND A1.activity_type = "start" AND  A2.activity_type = "end" 
+
+```
+
+After obtaining the table which contains start and end timestamps of process belonging to a machine , we need to return machine_id's and average processing time (ending timestamp - starting timestamp). So, we need to group the data by machine_id so that we can perform average aggregation
+
+```
+
+SELECT A1.machine_id , ROUND(AVG(A2.timestamp - A1.timestamp),3) AS processing_time
+FROM Activity as A1 , Activity as A2 WHERE A1.machine_id = A2.machine_id AND A1.process_id = A2.process_id AND A1.activity_type = "start" AND  A2.activity_type = "end" 
+GROUP BY A1.machine_id;
+
+```
+
+
+</li>
+
 </ol>
