@@ -488,4 +488,39 @@ group by product_id
 
 </li>
 
+<li>
+
+Write a solution to find the daily active user count for a period of 30 days ending 2019-07-27 inclusively. A user was active on someday if they made at least one activity on that day.
+
+Table: Activity
+
++---------------+---------+
+| Column Name   | Type    |
++---------------+---------+
+| user_id       | int     |
+| session_id    | int     |
+| activity_date | date    |
+| activity_type | enum    |
++---------------+---------+
+
+We need to select all rows initially which have activity date as a date less than 2019-07-27 and difference between them is not more than 30. We can achieve this using <strong>DATEDIFF()</strong> function. We must also check that the activity_date is less than 2019-07-27 because DATEDIFF gives absolute difference in days between two days.
+
+```
+
+FROM Activity WHERE activity_date <= "2019-07-27" AND DATEDIFF("2019-07-27",activity_date) < 30
+
+```
+
+Now , we need count of active users so, we must count distinct users by grouping the activity_date which helps us to find number of active users on that particular date
+
+```
+
+SELECT activity_date as day, count(DISTINCT user_id) as active_users
+FROM Activity WHERE activity_date <= "2019-07-27" AND DATEDIFF("2019-07-27",activity_date) < 30
+GROUP BY activity_date;
+
+```
+
+</li>
+
 </ol>
