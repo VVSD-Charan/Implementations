@@ -364,4 +364,31 @@ SELECT e.name , b.bonus FROM Employee e LEFT JOIN Bonus b ON e.empId = b.empId W
 
 </li>
 
+<li>
+
+Write a solution to find managers with at least five direct reports.<br>
+
+Table: Employee<br>
+
++-------------+---------+<br>
+| Column Name | Type    |<br>
++-------------+---------+<br>
+| id          | int     |<br>
+| name        | varchar |<br>
+| department  | varchar |<br>
+| managerId   | int     |<br>
++-------------+---------+<br><br>
+
+First of all we need to find entire matching data of employees and managers. Then we can group them on basic of matching employee id's and filter out number of numbers by using <strong>HAVING</strong> clause.
+
+```
+
+SELECT e.name
+FROM Employee e INNER JOIN Employee m on e.id = m.managerId
+GROUP BY e.id  HAVING COUNT(e.id) >= 5;
+
+```
+
+</li>
+
 </ol>
