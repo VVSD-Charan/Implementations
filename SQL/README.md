@@ -391,4 +391,62 @@ GROUP BY e.id  HAVING COUNT(e.id) >= 5;
 
 </li>
 
+<li>
+
+The confirmation rate of a user is the number of 'confirmed' messages divided by the total number of requested confirmation messages. The confirmation rate of a user that did not request any confirmation messages is 0. Round the confirmation rate to two decimal places.<br>
+
+Write a solution to find the confirmation rate of each user.<br>
+
+Table: Signups<br><br>
+
++----------------+----------+<br>
+| Column Name    | Type     |<br>
++----------------+----------+<br>
+| user_id        | int      |<br>
+| time_stamp     | datetime |<br>
++----------------+----------+<br><br>
+ 
+
+Table: Confirmations<br><br>
+
++----------------+----------+<br>
+| Column Name    | Type     |<br>
++----------------+----------+<br>
+| user_id        | int      |<br>
+| time_stamp     | datetime |<br>
+| action         | ENUM     |<br>
++----------------+----------+<br><br>
+
+Even if there are no confirmations , we mjst display confirmation rate of all users so , we need to perform LEFT join initially.
+
+```
+
+FROM Signups s LEFT JOIN Confirmations c ON s.user_id = c.user_id
+
+```
+
+If action in confirmations is "confirmed", then we must increment count by one otherwise we should not count that. To achieve that , we need <strong>IF statement</strong>. We need to perform aggregate on average of confirmations,so we need to group data in terms of user id .
+
+```
+
+SELECT s.user_id , ROUND((AVG(IF(c.action = "confirmed",1,0))),2) AS confirmation_rate
+FROM Signups s LEFT JOIN Confirmations c ON s.user_id = c.user_id
+GROUP BY s.user_id
+
+
+```
+
+Using <strong>case</strong>
+
+```
+
+SELECT s.user_id , ROUND(AVG(CASE WHEN c.action='confirmed' then 1 else 0 end),2) AS confirmation_rate
+FROM Signups s LEFT JOIN Confirmations c ON s.user_id = c.user_id
+GROUP BY s.user_id
+
+
+```
+
+</li>
+
 </ol>
