@@ -219,8 +219,43 @@ WHERE T.transaction_id IS NULL
 GROUP BY V.customer_id
 
 ```
+</li>
+
+<li>
+
+Write a solution to find all dates' Id with higher temperatures compared to its previous dates (yesterday).<br>
+
+Table: Weather<br><br>
+
++---------------+---------+<br>
+| Column Name   | Type    |<br>
++---------------+---------+<br>
+| id            | int     |<br>
+| recordDate    | date    |<br>
+| temperature   | int     |<br>
++---------------+---------+<br><br>
+
+We can use SELF JOIN to obtain solution. We need to compare dates such that difference between dates should be one and the temperature next day should be greater than the temperature on before date.<br>
+
+Using INNER JOIN with same table can still get us the required solution <br>
+
+```
+
+SELECT w1.id FROM Weather AS w1 INNER JOIN Weather AS w2 WHERE
+DATEDIFF(w1.recordDate,w2.recordDate) = 1 AND w1.temperature > w2.temperature;
+
+```
+
+Using self Join,
+
+```
+
+SELECT w1.id FROM Weather w1 , Weather w2 WHERE DATEDIFF(w1.recordDate,w2.recordDate) = 1 AND w1.temperature > w2.temperature
+
+```
 
 
 
 </li>
+
 </ol>
