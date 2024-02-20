@@ -311,6 +311,56 @@ GROUP BY A1.machine_id;
 
 ```
 
+</li>
+
+<li>
+
+Write a solution to report the name and bonus amount of each employee with a bonus less than 1000. (We need to return employees with no bonus too).<br>
+
+Table: Employee <br><br>
+
++-------------+---------+<br>
+| Column Name | Type    |<br>
++-------------+---------+<br>
+| empId       | int     |<br>
+| name        | varchar |<br>
+| supervisor  | int     |<br>
+| salary      | int     |<br>
++-------------+---------+<br><br>
+
+Table: Bonus<br><br>
+
++-------------+------+<br>
+| Column Name | Type |<br>
++-------------+------+<br>
+| empId       | int  |<br>
+| bonus       | int  |<br>
++-------------+------+<br><br>
+
+We must fetch employees with no bonuses too i.e we need employee names even if we find no matching data in bonus table. So , we must perform left join .
+
+```
+
+FROM Employee e LEFT JOIN Bonus as b ON e.empId = b.empId
+
+```
+
+Now , we need only those data where either there is no bonus (bonus data is NULL) or bonus is less than 1000. So , we must apply condition for that.
+
+```
+
+FROM Employee e LEFT JOIN Bonus as b ON e.empId = b.empId
+WHERE b.bonus is NULL OR b.bonus < 1000; 
+
+```
+
+We can use <strong>COALESCE()</strong> function as well as it helps us to handle NULLs. We can consider value of bonus as 0 if it is NULL.
+
+```
+
+SELECT e.name , b.bonus FROM Employee e LEFT JOIN Bonus b ON e.empId = b.empId WHERE COALESCE(b.bonus,0) < 1000
+
+```
 
 </li>
 
