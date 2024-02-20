@@ -449,4 +449,43 @@ GROUP BY s.user_id
 
 </li>
 
+<li>
+
+Write a solution to find the average selling price for each product. average_price should be rounded to 2 decimal places.<br>
+
+Table: Prices
+
++---------------+---------+
+| Column Name   | Type    |
++---------------+---------+
+| product_id    | int     |
+| start_date    | date    |
+| end_date      | date    |
+| price         | int     |
++---------------+---------+
+
+Table: UnitsSold
+
++---------------+---------+
+| Column Name   | Type    |
++---------------+---------+
+| product_id    | int     |
+| purchase_date | date    |
+| units         | int     |
++---------------+---------+
+
+The purchase_date should be between start_date and end_date to be sold for a particular price. So , we must perform LEFT JOIN using common attribute product_id and check if purchase date is <strong>BETWEEN</strong> start and end dates. 
+
+```
+
+SELECT p.product_id, IFNULL(ROUND(SUM(units*price)/SUM(units),2),0) AS average_price
+FROM Prices p LEFT JOIN UnitsSold u
+ON p.product_id = u.product_id AND
+u.purchase_date BETWEEN start_date AND end_date
+group by product_id
+
+```
+
+</li>
+
 </ol>
