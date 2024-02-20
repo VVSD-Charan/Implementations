@@ -254,6 +254,24 @@ SELECT w1.id FROM Weather w1 , Weather w2 WHERE DATEDIFF(w1.recordDate,w2.record
 
 ```
 
+Using subdate function
+
+```
+
+SELECT w1.id from Weather w1 , Weather w2 WHERE subdate(w1.recordDate,1) = w2.recordDate AND w1.temperature > w2.temperature;
+
+```
+
+### DATEDIFF() function in SQL
+It can be of three parameters <br>
+<strong>DATEDIFF(date1,date2)</strong> => returns an integer denoting number of days between date1 and date2 <br>
+<strong>DATEDIFF(interval,date1,date2) => returns difference between dates in terms of an interval. Interval can be month,year,weeks,hours,muntes,seconds.</strong>
+
+
+
+### SUBDATE() funtcion in SQL
+<strong>SUBDATE(DATE,x)</strong> returns date obtained after subtracting x days from given date . <br>
+<strong>SUBDATE(DATE,x unit)</strong> returns "units" after deleting x units from given date.
 
 
 </li>
