@@ -148,6 +148,78 @@ The right join operation returns all record from right table and matching record
 ### Full outer Join
 
 A full outer join returns all rows from both tables being joined, regardless of whether there is a match or not. If there is no matching value in one of the tables, the result set will still include that row, with NULL values for columns from the other table.
+</li>
+
+<li>
+
+Write a solution to find the IDs of the users who visited without making any transactions and the number of times they made these types of visits. <br>
+
+Table: Visits <br><br>
+
++-------------+---------+<br>
+| Column Name | Type    |<br>
++-------------+---------+<br>
+| visit_id    | int     |<br>
+| customer_id | int     |<br>
++-------------+---------+<br><br>
+
+Table: Transactions<br><br>
+
++----------------+---------+<br>
+| Column Name    | Type    |<br>
++----------------+---------+<br>
+| transaction_id | int     |<br>
+| visit_id       | int     |<br>
+| amount         | int     |<br>
++----------------+---------+<br><br>
+
+```
+
+SELECT V.customer_id , COUNT(V.visit_id) as count_no_trans
+FROM Visits as V
+LEFT JOIN Transactions as T
+ON V.visit_id = T.visit_id
+WHERE T.transaction_id IS NULL
+GROUP BY V.customer_id
+
+```
+
+### Approaching step by step
+
+We need to find all those visits where transactions didnot occur . So, even if there are no matching transactions we need to fetch all visits. So , initially we can perform left JOIN
+
+```
+
+FROM Visits as V
+LEFT JOIN Transactions as T
+ON V.visit_id = T.visit_id
+
+```
+
+Now we will get entire data and if there are no transactions for a visit , then we will get all values belonging to transactions as NULL. We are interested only in those rows which donot have matching transaction data . So , we can now remove all those rows which have matching data. Since rows with no matching data will have transaction_id as NULL , we can use that condition.
+
+```
+
+FROM Visits as V
+LEFT JOIN Transactions as T
+ON V.visit_id = T.visit_id
+WHERE T.transaction_id IS NULL
+
+```
+
+Now we will get all the rows which have visits but no transactions associated with them. Now , we need to find those customer_id's and count of their visits.
+
+```
+
+SELECT V.customer_id , COUNT(V.visit_id) as count_no_trans
+FROM Visits as V
+LEFT JOIN Transactions as T
+ON V.visit_id = T.visit_id
+WHERE T.transaction_id IS NULL
+GROUP BY V.customer_id
+
+```
+
 
 
 </li>
