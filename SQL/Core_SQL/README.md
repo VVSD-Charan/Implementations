@@ -1,3 +1,20 @@
+# Theory based
+
+### Views in SQL
+
+View is a virtual table containing a subset of data retrieved from one or more database tables (or other views). Views take very little space, simplify complex queries, limit access to the data for security reasons, enable data independence, and summarize data from multiple tables. <br>
+<strong> A view always shows up-to-date data! The database engine recreates the view, every time a user queries it.</strong>
+<br>
+We cannot use a view if the base table is deleted . Using view after deleting base table throws an error. <br><br>
+
+### Normalization vs DeNormalization
+
+Normalization is a process of database design that includes organizing and restructuring data in a way to reduce data redundancy, dependency, duplication, and inconsistency. This leads to enhanced data integrity, more tables within the database, more efficient data access and security control, and greater query flexibility. <br>
+
+Denormalization is the process opposite of normalization: it introduces data redundancy and combines data from multiple tables. Denormalization optimizes the performance of the database infrastructure in situations when read operations are more important than write operations since it helps avoid complex joins and reduces the time of query running.<br><br>
+
+# SYNTAX based
+
 ### CASE in SQL
 
 Case is the way to implement the if-then-else logic in SQL. This function sequentially checks the provided conditions in the WHEN clauses and returns the value from the corresponding THEN clause when the first condition is satisfied. If none of the conditions is satisfied, the function returns the value from the ELSE clause in case it's provided, otherwise, it returns NULL.
@@ -69,5 +86,14 @@ For matching pattern we can use LIKE operator in combination with the '%' and '_
     <li>TRIM() => Removes blank spaces if present from starting and ending of string</li>
 </ol>
 
+# COMPILER RELATED
+
+### Appearence of statements in SELECT query
+
+SELECT – FROM – JOIN – ON – WHERE – GROUP BY – HAVING – ORDER BY – LIMIT
+
+### Order of execution by interpreter
+
+FROM – JOIN – ON – WHERE – GROUP BY – HAVING – SELECT – ORDER BY – LIMIT
 
 
