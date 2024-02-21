@@ -71,17 +71,91 @@ void insertionSort(int arr[], int n)
     for (i = 1; i < n; i++) {
         key = arr[i];
         j = i - 1;
- 
-        // Move elements of arr[0..i-1],
-        // that are greater than key, 
-        // to one position ahead of their
-        // current position
-        while (j >= 0 && arr[j] > key) {
+
+        while (j >= 0 && arr[j] > key) 
+        {
             arr[j + 1] = arr[j];
             j = j - 1;
         }
         arr[j + 1] = key;
     }
+}
+
+```
+
+
+### Merge Sort algorithm
+
+<li>In this algorithm , we split array recursively into halves until it cannot be broken further i.e till array has only one element remaining. Then we start merging broken sub-arrays into sorted order.</li>
+<li>These sorted subarrays will slowly be combined to get sorted array.</li>
+<li>Time complexity is O(NlogN)</li>
+<li>Space complexity is O(N)</li>
+<li>It can be used to sort large datasets.</li>
+<li>For small data sets merge sort has higher time complexity than some other sorting algorithms.</li>
+
+```
+
+void merge(int array[], int const left, int const mid,
+           int const right)
+{
+    int const subArrayOne = mid - left + 1;
+    int const subArrayTwo = right - mid;
+ 
+    auto *leftArray = new int[subArrayOne],
+         *rightArray = new int[subArrayTwo];
+ 
+    for (auto i = 0; i < subArrayOne; i++)
+        leftArray[i] = array[left + i];
+    for (auto j = 0; j < subArrayTwo; j++)
+        rightArray[j] = array[mid + 1 + j];
+ 
+    auto indexOfSubArrayOne = 0, indexOfSubArrayTwo = 0;
+    int indexOfMergedArray = left;
+ 
+    while (indexOfSubArrayOne < subArrayOne
+           && indexOfSubArrayTwo < subArrayTwo) {
+        if (leftArray[indexOfSubArrayOne]
+            <= rightArray[indexOfSubArrayTwo]) {
+            array[indexOfMergedArray]
+                = leftArray[indexOfSubArrayOne];
+            indexOfSubArrayOne++;
+        }
+        else {
+            array[indexOfMergedArray]
+                = rightArray[indexOfSubArrayTwo];
+            indexOfSubArrayTwo++;
+        }
+        indexOfMergedArray++;
+    }
+ 
+    while (indexOfSubArrayOne < subArrayOne) {
+        array[indexOfMergedArray]
+            = leftArray[indexOfSubArrayOne];
+        indexOfSubArrayOne++;
+        indexOfMergedArray++;
+    }
+ 
+    // Copy the remaining elements of
+    // right[], if there are any
+    while (indexOfSubArrayTwo < subArrayTwo) {
+        array[indexOfMergedArray]
+            = rightArray[indexOfSubArrayTwo];
+        indexOfSubArrayTwo++;
+        indexOfMergedArray++;
+    }
+    delete[] leftArray;
+    delete[] rightArray;
+}
+ 
+void mergeSort(int array[], int const begin, int const end)
+{
+    if (begin >= end)
+        return;
+ 
+    int mid = begin + (end - begin) / 2;
+    mergeSort(array, begin, mid);
+    mergeSort(array, mid + 1, end);
+    merge(array, begin, mid, end);
 }
 
 ```
