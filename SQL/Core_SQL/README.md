@@ -1,5 +1,52 @@
 # Theory based
 
+### Triggers in SQL
+
+Triggers are stored programs / procedures which are automatically executed or fired when some events occur. Those events can be :
+
+<ol>
+    <li>DML (statements like DELETE , INSERT , UPDATE)</li>
+    <li>DDL (statements like CREATE , ALTER , DROP)</li>
+    <li>Database operations (like LOGON,LOGOFF,STARTUP,STARTDOWN)</li>
+</ol>
+
+Trigger can be fired on a table , view , schema , database with which the event is associated.<br>
+
+Benefits of triggers :
+<li>Gain strong control over security.</li>
+<li>Enforcing referential integrity.</li>
+<li>Event logging and access to store information of table.</li>
+<li>Auditing operations on table.</li>
+<li>Synchronous replication of tables.</li>
+<li>Preventing invalid transactions.</li>
+
+```
+
+CREATE [OR REPLACE] TRIGGER trigger_name
+{BEFORE | AFTER}
+{INSERT [OR] | UPDATE [OR] | DELETE}
+ON table_name
+[FOR EACH ROW]
+
+DECLARE
+Declaration - statements
+BEGIN
+Executable - statements
+END
+
+```
+
+CREATE [OR REPLACE] TRIGGER trigger_name => Creates or replaces an existing trigger with trigger_name.<br>
+
+{BEFORE | AFTER} => This specifies when the trigger will be executed.<br>
+
+{INSERT [OR] | UPDATE [OR] | DELETE} => This specifies DML operation.<br>
+
+ON table_name => Specifies name of table associated with the trigger.<br>
+
+[FOR EACH ROW] => Specifies row-level trigger i.e the trigger will be executed for each row being affected. Otherwise trigger will be executed only when SQL statement is executed , which is called table level trigger. <br>
+
+
 ### Views in SQL
 
 View is a virtual table containing a subset of data retrieved from one or more database tables (or other views). Views take very little space, simplify complex queries, limit access to the data for security reasons, enable data independence, and summarize data from multiple tables. <br>
