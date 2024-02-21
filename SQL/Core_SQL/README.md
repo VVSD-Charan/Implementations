@@ -44,7 +44,26 @@ CREATE [OR REPLACE] TRIGGER trigger_name => Creates or replaces an existing trig
 
 ON table_name => Specifies name of table associated with the trigger.<br>
 
-[FOR EACH ROW] => Specifies row-level trigger i.e the trigger will be executed for each row being affected. Otherwise trigger will be executed only when SQL statement is executed , which is called table level trigger. <br>
+[FOR EACH ROW] => Specifies row-level trigger i.e the trigger will be executed for each row being affected. Otherwise trigger will be executed only when SQL statement is executed , which is called table level trigger. <br><br>
+
+Creating trigger to find out salary differences after for each row which is effected <br>
+
+```
+
+CREATE TRIGGER salary_difference
+BEFORE INSERT OR DELETE OR UPDATE ON emp
+FOR EACH ROW
+DECLARE
+salary_difference NUMBER;
+
+BEGIN
+salary_difference := :new.salary - :old.salary;
+dbms_output.put_line('Old Salary : ' || :old.salary);
+dbms_output.put_line('New Salary : ' || :new.salary);
+dbms_output.put_line('Salary Difference : ' || salary_difference);
+END;
+
+```
 
 
 ### Views in SQL
