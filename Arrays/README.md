@@ -1,4 +1,4 @@
-### Dutch national flag algorithm
+## Dutch national flag algorithm
 
 <li>It is a three pointer solution to sort an array of 0 1 2</li>
 <li>Time complexity of algorithm is O(n).</li>
@@ -34,7 +34,7 @@
 
 ```
 
-### Kadane's algorithm
+## Kadane's algorithm
 <li>It is an algorithm to find out maximum sum of subarray in an array.</li>
 <li>Time complexity is O(n) and space complexity is O(1).</li>
 
@@ -99,7 +99,7 @@ int maxProduct(vector<int>& nums)
 
 ```
 
-### Moore's voting algorithm
+## Moore's voting algorithm
 
 <li>According to the problem, an element with frequency greater than (n/2) is considered as a majority element.</li>
 <li>We can observe that if an element has a frequency > (n/2) i.e majority element , then difference between frequency of majority element and combined frequencies of all other elements will be > 0.</li>
