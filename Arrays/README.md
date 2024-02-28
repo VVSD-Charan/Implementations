@@ -98,3 +98,48 @@ int maxProduct(vector<int>& nums)
     }
 
 ```
+
+### Moore's voting algorithm
+
+<li>According to the problem, an element with frequency greater than (n/2) is considered as a majority element.</li>
+<li>We can observe that if an element has a frequency > (n/2) i.e majority element , then difference between frequency of majority element and combined frequencies of all other elements will be > 0.</li>
+<li>In this algorithm we maintain a variable named majority_element, and a variable counter which is incremented when current element is our assumed majority_element, otherwise it is decremented. When counter becomes zero , it means that frequencies of candidate majority element and other elements have been cancelled.</li>
+<li>After iterating entire array, we get a candidate majority element. Now, we must verify if it is actually the element we wanted. If it is not the one, then it means that there is no majority element in array.</li>
+
+```
+
+int majorityElement(vector<int> v)
+{
+	int majority_element = v[0];
+	int counter = 1;
+	int n = v.size();
+
+	for(int i = 1 ; i < n ; i++)
+	{
+		if(v[i] == majority_element)
+		{
+			counter++;
+		}
+		else
+		{
+			counter--;
+		}
+
+		if(counter == 0)
+		{
+			counter = 1;
+			majority_element = v[i];
+		}
+	}
+
+	int freq = 0;
+
+	for(int i = 0 ; i < n ; i++)
+	{
+		freq = freq + (v[i] == majority_element);
+	}
+
+	return (freq > (n/2) ? majority_element : -1);
+}
+
+```
