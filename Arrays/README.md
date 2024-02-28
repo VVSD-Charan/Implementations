@@ -143,3 +143,38 @@ int majorityElement(vector<int> v)
 }
 
 ```
+
+### Rotating array towards right k times
+
+<li>If arr = [1,2,3,4,5,6,7] and k = 3 , then resultant should be [5,6,7,1,2,3,4] i.e last k elements [5,6,7] will be shifted to right.</li>
+<li>We must partition array into two parts , second of size k ([5,6,7]) as they must be moved right and first partition of size n-k ([1,2,3,4]).</li>
+<li>Reverse both the parts, then they become   [4,3,2,1] | [7,6,5]</li>
+<li>Now , reverse the entire array , we get [5,6,7,1,2,3,4] which is the required resultant array.</li>
+
+```
+
+ void reverseArray(vector<int>&nums,int i,int j)
+    {
+        while(i < j)
+        {
+            swap(nums[i],nums[j]);
+            i = i + 1;
+            j = j - 1;
+        }
+    }
+
+    void rotate(vector<int>& nums, int k) 
+    {
+        int n = nums.size();
+        if(k >= n){
+            k = (k % n);
+        }
+        if(k == 0)return;
+
+        k = n - k;
+        reverseArray(nums,0,k-1);
+        reverseArray(nums,k,n-1);
+        reverseArray(nums,0,n-1);
+    }
+
+```
