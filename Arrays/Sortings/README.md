@@ -159,3 +159,56 @@ void mergeSort(int array[], int const begin, int const end)
 }
 
 ```
+
+### Quick sort algorithm
+
+<li>In quick sort algorithm, we choose an element as pivot, keep it in its correct position , keep lesser elements in left and greater elements in right subarrays. After placing pivot in correct position, we then recursively sort left and right subarrays.</li>
+<li>Quick sort is an algorithm based on Divide and conquer.</li>
+<li>Choices to chosse pivot : 
+    <ol>
+        <li>Picking first element always as pivot.</li>
+        <li>Picking last element always as pivot.</li>
+        <li>Picking random element as a pivot.</li>
+        <li>Pick middle element as pivot.</li>
+    </ol>
+</li>
+<li>Quick sort algorithm has an average case complxity of θ(NlogN)</li>
+<li>Worst case time complexity of quick sort is O(N^2), when array is already sorted.</li>
+<li>If we donot consider recursive stack space , then space complexity is O(1) , else it is O(N)</li>
+<li>Quick sort is efficient for large data sets.</li>
+<li>Quick sort has low overhead , as it only requires a small amount of memory to function.</li>
+<li>It is not a good choice for small data sets.</li>
+<li>It is not a stable sort i.e if two elements have same value , then their relative order in sorted array will not be maintained.</li>
+
+```
+
+int partitionArray(int input[], int start, int end) 
+{
+	int pivot = input[end];
+	int first_index = start-1;
+
+	for(int i = start ; i <= end ; i++)
+	{
+		if(input[i] < pivot)
+		{
+			first_index++;
+			swap(input[first_index],input[i]);
+		}
+	}
+
+	swap(input[first_index+1],input[end]);
+	return (first_index + 1);
+}
+
+void quickSort(int input[], int start, int end) 
+{
+	if(start < end)
+	{
+		int partition_index = partitionArray(input,start,end);
+
+		quickSort(input,start,partition_index-1);
+		quickSort(input,partition_index+1,end);
+	}
+}
+
+```
