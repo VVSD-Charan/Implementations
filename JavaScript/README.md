@@ -33,7 +33,7 @@ var square4 = square(4);
 ## Phase 1 :  Memory creation phase
 <li>In this phase,JavaScript will allocate space to all variables and functions.</li>
 <li>In this phase , JavaScript goes line by line and allocates memory to all variables and functions.</li>
-<li>If it encounters a variable , memory is allocated to it and variables are initialized as <strong>undefined</strong> . If it encounters a function , then <strong>entire code of function</strong> will be stored.</li><br>
+<li>If it encounters a variable , memory is allocated to it and variables are initialized as <strong>undefined</strong> . If it encounters a function , then <strong>entire code of function</strong> will be stored.</li><br><br>
 
 ![alt text](<WhatsApp Image 2024-02-29 at 18.50.36_66814c5d.jpg>)
 
@@ -68,27 +68,27 @@ var square2 = square(n);
 
 <li>
 As function is invoked , an entirely new execution context will be created for  function inside code component. 
-</li><br>
+</li><br><br>
 
 ![WhatsApp Image 2024-02-29 at 23 23 13_e4c4d672](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/0bda640e-74eb-422a-8271-ad0edbbac2db)
 
 <li>
 The execution context created will be for that piece of code i.e function only. Again both the phases i.e memory creation and code execution phase will be done . The return statement in function returns value of variable in local memory to the place where function was invoked i.e value of 4 will be sent to variable square2 as function was invoked there.
-</li><br>
+</li><br><br>
 
 ![WhatsApp Image 2024-02-29 at 23 52 57_1a832194](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/5c8d42e8-20e0-4444-9cd4-4610ec466e66)
 
 <li>
 Similarly , the function will be invoked at line
-</li>
+</li><br>
 
 ```
 var square4 = square(4);
 ```
 
 <li>
-Again , new execution context will be created followed by phases 1 and 2. With this , the execution of entire code will be completed. Whenever execution context is done executing , it will be deleted. At the end of execution of program , the global execution context will also be deleted.
-</li><br>
+Again , new execution context will be created followed by phases 1 and 2. With this , the execution of entire code will be completed. Whenever execution context is done executing , it will be deleted. <strong> At the end of execution of program , the global execution context will also be deleted. </strong>
+</li><br><br>
 
 ![WhatsApp Image 2024-02-29 at 23 58 29_aa0581f0](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/4d25938c-86a7-47bc-a4c2-6f6edc645b5d)
 
