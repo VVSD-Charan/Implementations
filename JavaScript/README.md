@@ -93,6 +93,10 @@ Again , new execution context will be created followed by phases 1 and 2. With t
 ![WhatsApp Image 2024-02-29 at 23 58 29_aa0581f0](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/4d25938c-86a7-47bc-a4c2-6f6edc645b5d)
 
 
+## How does JavaScript manage such difficult tasks of execution context deletion and creation ?
 
+<li>When a function is invoked , a new execution context is created . And same goes on whenever a function is invoked.</li>
+<li><strong>JavaScript maintains a call stack</strong> to perform these operations.</li>
+<li>When a function is invoked , a new execution context is created and pushed into stack. When it completes its execution , the execution context will be popped out of stack.</li>
 
 
