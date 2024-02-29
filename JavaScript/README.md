@@ -43,30 +43,36 @@ var square4 = square(4);
 <li>JavaScript again goes line by line to execute code.</li>
 
     ```
+
     var n = 2;
 
     ```
-    <li>
+
+<li>
     After pahse 1 , variable n's memory allocation is being done and n was initialized as undefined. Now , in this phase the value of n will be set as 2 from undefined.
 </li>
+
     ```
+
     function square(num)
     {
         var ans = num * num;
         return ans;
     }
+
     ```
 
 <li>
     These lines of code are neglected by javaScript. Functions are inovked only when they are used.
 </li>
+
     ```
 
     var square2 = square(n);
 
     ```
 
-    <li>
+<li>
 
     As function is invoked , an entirely new execution context will be created for  function inside code component.<br>
 
