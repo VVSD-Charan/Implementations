@@ -77,6 +77,18 @@ The execution context created will be for that piece of code i.e function only. 
 
 ![WhatsApp Image 2024-02-29 at 23 52 57_1a832194](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/5c8d42e8-20e0-4444-9cd4-4610ec466e66)
 
+<li>
+Similarly , the function will be invoked at line
+```
+    var square4 = square(4);
+```
+
+Again , new execution context will be created followed by phases 1 and 2. With this , the execution of entire code will be completed.
+</li><br>
+
+![WhatsApp Image 2024-02-29 at 23 58 29_aa0581f0](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/4d25938c-86a7-47bc-a4c2-6f6edc645b5d)
+
+
 
 
 
