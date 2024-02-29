@@ -40,7 +40,7 @@ var square4 = square(4);
 
 ##### Phase 2 : Code execution phase
 
-<li>JavaScript again goes line by line to execute code.</li>
+<li>JavaScript again goes line by line to execute code.</li><br>
 
 ```
 var n = 2;
@@ -48,7 +48,7 @@ var n = 2;
 
 <li>
     After pahse 1 , variable n's memory allocation is being done and n was initialized as undefined. Now , in this phase the value of n will be set as 2 from undefined.
-</li>
+</li><br>
 
    ```
    function square(num)
@@ -60,18 +60,11 @@ var n = 2;
 
 <li>
     These lines of code are neglected by javaScript. Functions are inovked only when they are used.
-</li>
+</li><br>
 
 ```
 var square2 = square(n);
 ```
 
-<li>
 
-    As function is invoked , an entirely new execution context will be created for  function inside code component. <br>
-
-    ![alt text](<WhatsApp Image 2024-02-29 at 23.23.14_b20c68ea.jpg>)
-
-    The execution context created will be for that piece of code i.e function only. Again both the phases i.e memory creation and code execution phase will be done .
-</li>
 
