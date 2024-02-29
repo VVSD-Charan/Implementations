@@ -62,9 +62,9 @@ var n = 2;
     These lines of code are neglected by javaScript. Functions are inovked only when they are used.
 </li>
 
-    ```
-    var square2 = square(n);
-    ```
+```
+var square2 = square(n);
+```
 
 <li>
 
