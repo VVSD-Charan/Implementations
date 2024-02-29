@@ -72,8 +72,11 @@ As function is invoked , an entirely new execution context will be created for  
 
 ![WhatsApp Image 2024-02-29 at 23 23 13_e4c4d672](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/0bda640e-74eb-422a-8271-ad0edbbac2db)
 
-The execution context created will be for that piece of code i.e function only. Again both the phases i.e memory creation and code execution phase will be done .
-</li>
+The execution context created will be for that piece of code i.e function only. Again both the phases i.e memory creation and code execution phase will be done . The return statement in function returns value of variable in local memory to the place where function was invoked i.e value of 4 will be sent to variable square2 as function was invoked there.
+</li><br>
+
+![WhatsApp Image 2024-02-29 at 23 52 57_1a832194](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/5c8d42e8-20e0-4444-9cd4-4610ec466e66)
+
 
 
 
