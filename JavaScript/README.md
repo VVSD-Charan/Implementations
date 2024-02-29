@@ -87,7 +87,7 @@ var square4 = square(4);
 ```
 
 <li>
-Again , new execution context will be created followed by phases 1 and 2. With this , the execution of entire code will be completed.
+Again , new execution context will be created followed by phases 1 and 2. With this , the execution of entire code will be completed. Whenever execution context is done executing , it will be deleted. At the end of execution of program , the global execution context will also be deleted.
 </li><br>
 
 ![WhatsApp Image 2024-02-29 at 23 58 29_aa0581f0](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/4d25938c-86a7-47bc-a4c2-6f6edc645b5d)
