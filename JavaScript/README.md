@@ -58,8 +58,11 @@ var square4 = square(4);
     These lines of code are neglected by javaScript. Functions are inovked only when they are used.
 </li>
 <li>
+
     ```
+
     var square2 = square(n);
+    
     ```
     As function is invoked , an entirely new execution context will be created for  function inside code component.<br>
 
