@@ -70,7 +70,7 @@ var square2 = square(n);
 As function is invoked , an entirely new execution context will be created for  function inside code component. 
 <br>
 
-    ![WhatsApp Image 2024-02-29 at 23 23 13_e4c4d672](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/0bda640e-74eb-422a-8271-ad0edbbac2db)
+![WhatsApp Image 2024-02-29 at 23 23 13_e4c4d672](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/0bda640e-74eb-422a-8271-ad0edbbac2db)
 
 The execution context created will be for that piece of code i.e function only. Again both the phases i.e memory creation and code execution phase will be done .
 </li>
