@@ -68,10 +68,11 @@ var square2 = square(n);
 
 <li>
 As function is invoked , an entirely new execution context will be created for  function inside code component. 
-<br>
+</li><br>
 
 ![WhatsApp Image 2024-02-29 at 23 23 13_e4c4d672](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/0bda640e-74eb-422a-8271-ad0edbbac2db)
 
+<li>
 The execution context created will be for that piece of code i.e function only. Again both the phases i.e memory creation and code execution phase will be done . The return statement in function returns value of variable in local memory to the place where function was invoked i.e value of 4 will be sent to variable square2 as function was invoked there.
 </li><br>
 
@@ -79,10 +80,13 @@ The execution context created will be for that piece of code i.e function only. 
 
 <li>
 Similarly , the function will be invoked at line
+</li>
+
 ```
-    var square4 = square(4);
+var square4 = square(4);
 ```
 
+<li>
 Again , new execution context will be created followed by phases 1 and 2. With this , the execution of entire code will be completed.
 </li><br>
 
