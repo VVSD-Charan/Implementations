@@ -98,5 +98,6 @@ Again , new execution context will be created followed by phases 1 and 2. With t
 <li>When a function is invoked , a new execution context is created . And same goes on whenever a function is invoked.</li>
 <li><strong>JavaScript maintains a call stack</strong> to perform these operations.</li>
 <li>When a function is invoked , a new execution context is created and pushed into stack. When it completes its execution , the execution context will be popped out of stack.</li>
+<li>Global execution context always stays at the bottom of the stack.</li>
 
 
