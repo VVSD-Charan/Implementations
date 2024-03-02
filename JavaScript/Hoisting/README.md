@@ -1,13 +1,13 @@
 # Hoisting in JavaScript
 
-### Case 1 :
+## Case 1 :
 <br>
 
 ![Screenshot (203)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/cd52c9b7-04af-4471-9476-cf9097eb1d28)
 
 Everything works as expected because the values of variables are lready declared and function is created. <br>
 
-### Case 2 :
+## Case 2 :
 <br>
 
 ![Screenshot (202)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/42f156f2-b31f-4afb-9533-541b266da81a)
