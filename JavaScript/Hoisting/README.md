@@ -1,5 +1,11 @@
 # Hoisting in JavaScript
 
+<li>In JavaScript, Hoisting is the default behavior of moving all the declarations at the top of the scope before code execution.</li>
+<li>It gives us an advantage that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local. </li>
+<li>Hoisting allows us to call functions before even writing them in our code.</li>
+<li><strong>JavaScript only hoists declarations, not initializations.</strong></li>
+
+
 ## Case 1 :
 <br>
 
@@ -65,3 +71,26 @@ function thala()
 ```
 
 The function is already present in memory as memory allocation happens in first phase only. So, with this , the entire execution will be done and context execution will be deleted.
+
+## Case 3 :
+
+![Screenshot (206)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/6bd67220-5ca0-4785-8e5e-fd6e1cbfc1ef)
+
+<li>When we use arrow functions and call the function before declaration , we get an error.</li>
+<li>This is because , thala is considered as a variable in memory creation phase and is defined as undefined.</li>
+<li>Calling undefined function gives an error.</li>
+
+```
+
+console.log(jerseyNumber);
+console.log(thala);
+
+var jerseyNumber = 7;
+var thala = () =>{
+    console.log("Thala for a reason");
+}
+
+
+```
+
+This code will work well as thala will be undefined while it is printed.
