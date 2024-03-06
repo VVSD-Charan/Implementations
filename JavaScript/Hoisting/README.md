@@ -130,4 +130,7 @@ So, as arrow function are initialized as undefined in first phase , calling the 
 
 ![Screenshot (208)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/ff31c12f-3478-4b7d-85f2-c241178750d1)
 
+It works similar in the case of anonymous functions as well. <br>
+
+![Screenshot (209)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/5098a316-d650-4f10-9ba6-c26fcaddafe3)
 
