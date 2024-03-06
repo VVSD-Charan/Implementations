@@ -51,7 +51,7 @@ vector <int> search(string pat, string txt)
 <li>In the Naive String Matching algorithm, we check whether every substring of the text of the pattern’s size is equal to the pattern or not one by one.</li>
 <li>Rabin Karp algorithm matches the hash value of the pattern with the hash value of the current substring of text, and if the hash values match then only it starts matching individual characters.</li>
 <li>Hash value is used to efficiently check for potential matches between a pattern and substrings of a larger text. The hash value is calculated using a <strong>rolling hash function</strong>, which allows you to update the hash value for a new substring by efficiently removing the contribution of the old character and adding the contribution of the new character.</li>
-<li>Average case time complexity is O(n+m) and worst case time complexity is O(n*m) , when all substrings of length m match.</li>
+<li>Average case time complexity is O(n+m) and worst case time complexity is O(n*m) , when all substrings of length m match.</li> <br><br>
 
 ```
 
