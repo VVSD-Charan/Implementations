@@ -37,5 +37,10 @@ Now, code execution phase starts and value of x in a's execution context will be
 
 Like execution of line 2 , execution of line 3 also occurs , where a new execution context will be created for b , followed by memory creation phase . The execution context of b will be pushed into stack and code execution phase begins . Once, x's value of this execution context is changed to 1000 and console.log() statement is executed , the execution context of b will also be completed and will be popped out from call stack.
 
-#### Execution of line 4
+#### Execution of line 5
 The value of x in global execution context is 1. So ,  1 will be printed and with this , entire execution is done and global execution context will be deleted from call stack / execution stack.
+
+#### Summary of entire execution context creation and deletion
+
+![WhatsApp Image 2024-03-06 at 22 52 55_6dee5b2c](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/d287f30e-972b-400a-8c2c-963f467402a7)
+
