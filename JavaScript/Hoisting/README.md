@@ -6,14 +6,14 @@
 <li><strong>JavaScript only hoists declarations, not initializations.</strong></li>
 
 
-## Case 1 :
+### Case 1 :
 <br>
 
 ![Screenshot (203)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/cd52c9b7-04af-4471-9476-cf9097eb1d28)
 
 Everything works as expected because the values of variables are lready declared and function is created. <br>
 
-## Case 2 :
+### Case 2 :
 <br>
 
 ![Screenshot (202)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/42f156f2-b31f-4afb-9533-541b266da81a)
@@ -23,7 +23,7 @@ This gives error in many other programming languages as we are using variables a
 <strong>How this works in JavaScript?  🤔</strong>
 
 Well , we can get this solution by revising the execution context. In the first phase , memory creation occurs i.e memory is allocated for varibales and functions. Initially , variables are initialized as 
-<strong>undefined</strong> and entire code of function is contained inside memory component.
+<strong>undefined</strong> and entire code of function is contained inside memory component. <br>
 
 ![WhatsApp Image 2024-03-02 at 19 14 36_52c90591](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/05af07f1-b406-490d-8cd9-ed5db1686210)
 
@@ -72,7 +72,8 @@ function thala()
 
 The function is already present in memory as memory allocation happens in first phase only. So, with this , the entire execution will be done and context execution will be deleted.
 
-## Case 3 :
+### Case 3 :
+<br>
 
 ![Screenshot (206)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/6bd67220-5ca0-4785-8e5e-fd6e1cbfc1ef)
 
@@ -93,4 +94,40 @@ var thala = () =>{
 
 ```
 
-This code will work well as thala will be undefined while it is printed.
+This code will work well as thala will be undefined while it is printed.<br><br>
+
+
+## Behaviour of arrow functions vs normal functions 
+<br>
+
+![Screenshot (207)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/5ce1196b-c964-4956-859e-20b6d6ef9396)
+
+<li>During memory creation phase i.e first phase of execution context , entire function code is stored as value for function.</li>
+<li>But, arrow function are considered as variables and are initialized as undefined.</li> <br>
+
+```
+
+console.log(thala);
+console.log(thalapathy);
+
+var thala = () =>
+{
+    console.log("Thala for a reason")
+}
+
+function thalapathy()
+{
+    console.log("Thalapathy for a reason")
+}
+
+```
+
+<strong>Execution context looks like : </strong> <br>
+
+![WhatsApp Image 2024-03-06 at 20 13 41_3a832771](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/69bc8e52-a7f8-45ce-a0f3-5d34ac082ec0)
+
+So, as arrow function are initialized as undefined in first phase , calling the function will result in an error. <br>
+
+![Screenshot (208)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/ff31c12f-3478-4b7d-85f2-c241178750d1)
+
+
