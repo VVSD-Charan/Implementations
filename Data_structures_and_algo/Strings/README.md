@@ -1,6 +1,9 @@
 ### KMP (Knuth Morris Pratt) Algorithm
 
-The KMP matching algorithm makes finding patterns faster by noticing when parts of the pattern repeat. It speeds up the search by skipping unnecessary comparisons based on what it already knows about the pattern and text. This reduces the worst-case complexity to O(n+m).
+<li>The KMP matching algorithm makes finding patterns faster by noticing when parts of the pattern repeat.</li> 
+<li>It speeds up the search by skipping unnecessary comparisons based on what it already knows about the pattern and text.</li>
+<li>This reduces the worst-case complexity to O(n+m).</li>
+<li>Space complexity is O(n+m).</li> <br>
 
 ```
 
