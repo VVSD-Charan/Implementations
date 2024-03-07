@@ -16,3 +16,8 @@ If a variable is declared but not given any value throughout the program , the v
 
 ![Screenshot (215)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/5ee5d0e8-979c-4e3e-9dab-52b71704942c)
 
+<br>
+
+# What do we mean when we say that JavaScript is a loosely typed language
+
+In JavaScript, if a variable is initialized with one data type , it can be assigned with another data type as well in future i.e a variable is not attached to certain data type in javaScript . This flexibility provided by javaScript for usage of variables is the reason behind javaScript being considered as loosely typed language.
