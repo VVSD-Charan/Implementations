@@ -20,4 +20,4 @@ If a variable is declared but not given any value throughout the program , the v
 
 # What do we mean when we say that JavaScript is a loosely typed language
 
-In JavaScript, if a variable is initialized with one data type , it can be assigned with another data type as well in future i.e a variable is not attached to certain data type in javaScript . This flexibility provided by javaScript for usage of variables is the reason behind javaScript being considered as loosely typed language.
+In JavaScript, if a variable is initialized with one data type , it can be assigned with another data type as well in future i.e variables can hold values of any data type and can be reassigned to different data types without explicit type declarations. This flexibility provided by javaScript for usage of variables is the reason behind javaScript being considered as loosely typed language.
