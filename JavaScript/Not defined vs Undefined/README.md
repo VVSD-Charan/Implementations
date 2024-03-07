@@ -18,6 +18,18 @@ If a variable is declared but not given any value throughout the program , the v
 
 <br>
 
-# What do we mean when we say that JavaScript is a loosely typed language
+# Not defined in JavaScript
 
-In JavaScript, if a variable is initialized with one data type , it can be assigned with another data type as well in future i.e variables can hold values of any data type and can be reassigned to different data types without explicit type declarations. This flexibility provided by javaScript for usage of variables is the reason behind javaScript being considered as loosely typed language.
+Not defined is an error which is thrown when a function or variable used is not present in memory of execution context. It is not a special keyword like undefined. <br>
+
+![Screenshot (217)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/ac985be5-5655-465d-86dc-50ace1083b48)
+
+
+<br>
+
+# What do we mean when we say that JavaScript is a loosely / weakly typed language
+
+In JavaScript, if a variable is initialized with one data type , it can be assigned with another data type as well in future i.e variables can hold values of any data type and can be reassigned to different data types without explicit type declarations. This flexibility provided by javaScript for usage of variables is the reason behind javaScript being considered as loosely typed language. <br>
+
+![Screenshot (216)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/b9bf3cea-ad1e-4ffc-8897-d7e6575116fc)
+
