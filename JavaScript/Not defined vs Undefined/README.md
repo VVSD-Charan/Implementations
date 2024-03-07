@@ -20,7 +20,7 @@ If a variable is declared but not given any value throughout the program , the v
 
 # Not defined in JavaScript
 
-Not defined is an error which is thrown when a function or variable used is not present in memory of execution context. It is not a special keyword like undefined. <br>
+Not defined is an error which is thrown when a function or variable used in the code is not present in memory component of execution context. It is not a special keyword like undefined. <br>
 
 ![Screenshot (217)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/ac985be5-5655-465d-86dc-50ace1083b48)
 
