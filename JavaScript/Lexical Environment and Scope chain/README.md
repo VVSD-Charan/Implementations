@@ -66,4 +66,10 @@ Lexical environment of b  ->  Lexical environment of a  ->  Lexical environment 
 Scope chain is like a singly linked list where each lexical environment can access lexical environment of it's parent , but the reverse is not possible i.e a parent lexical environment cannot access lexical environment of its child.
 
 
+# Closure in JavaScript
+
+<li>Closure is the concept of function + lexical environment in which function it was created. so every function declared within another function then it has access to the scope chain of the outer function and the variables created within the scope of the outer function will not get destroyed.</li>
+<li>JavaScript closure is a feature that allows inner functions to access the outer scope of a function. Closure helps in binding a function to its outer boundary and is created automatically whenever a function is created.</li>
+
+
 
