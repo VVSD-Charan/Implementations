@@ -33,7 +33,7 @@ When code execution phase of function a begins , we need access to variable b. B
 
 ![WhatsApp Image 2024-03-08 at 23 17 53_7d6513a6](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/6d132900-248d-4303-b168-36c1b961e8fc)
 
-With the help of pointer , we can access lexical environment of parent i.e global execution context. There , we can find variable b in memory with a value of 1000. So, function a prints this value of b as 1000 in console.
+With the help of pointer , we can access lexical environment of parent i.e global execution context. There , we can find variable b in memory with a value of 1000. So, function a prints this value of b as 1000 in console. <br>
 
 
 # Example of chaining
@@ -56,9 +56,12 @@ a();
 
 ![WhatsApp Image 2024-03-08 at 23 37 39_9e5167f1](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/c7fb1ab4-2bd8-4b0b-af33-e6f02f2a48d3)
 
+<br>
 The chaining looks like :
 
-Lexical environment of b  ->  Lexical environment of a  ->  Lexical environment of global execution context 
+Lexical environment of b  ->  Lexical environment of a  ->  Lexical environment of global execution context -> NULL <br>
+
+<strong>Global execution context will not have a parent so , the pinter will always reference NULL.</strong>
 
 
 
