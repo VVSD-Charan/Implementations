@@ -61,7 +61,9 @@ The chaining looks like :
 
 Lexical environment of b  ->  Lexical environment of a  ->  Lexical environment of global execution context -> NULL <br>
 
-<strong>Global execution context will not have a parent so , the pinter will always reference NULL.</strong>
+<strong>Global execution context will not have a parent so , the pinter will always reference NULL.</strong> <br>
+
+Scope chain is like a singly linked list where each lexical environment can access lexical environment of it's parent , but the reverse is not possible i.e a parent lexical environment cannot access lexical environment of its child.
 
 
 
