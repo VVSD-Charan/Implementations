@@ -47,3 +47,20 @@ In this case too , the let variable is initialized with a value in second line o
 
 Although in both the cases , we get a reference error , the exact reason mentioned will be different. 
 
+# Re-declaration of let variables
+
+Re-declaration of let variables will give us a syntax error. JavaScript doesn't even begin second phase (code execution phase) , if it is found out that a let variable has been re-declared.
+
+![Screenshot (230)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/d258d469-f81e-4655-a2ec-a2e1f6cf7f47)
+
+The console.log() statement is not even executed by javaScript as it finds out that there is a re-declaration of let variable in memory creation phase only and gives syntax error before even code execution phase starts. <strong>We cannot use same variable name multiple times in a scope if atleast one of them is initialized as a let variable.</strong>
+
+![Screenshot (231)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/e76288e4-c6cb-4332-bf95-e083000b0ff5)
+
+Even though variables are of type let and var with same variable name , we get an error because both of them belong to same scope.
+
+# Re-declaration of var variables
+
+Unlike let variables , var variables can be re-declared in same scope. It will not give us any syntax error and even though a variable names are same , if all of them are of var type then we donot get any error. We get an error only when atleast one of them in the same scope is let or const.
+
+![Screenshot (232)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/9966418e-b92a-4101-9249-34fded9e76b0)
