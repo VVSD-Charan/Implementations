@@ -24,3 +24,13 @@ Here , when we place debugger before line 1 , then we can observe that memory al
 
 The "temporal dead zone" refers to the period in the code where a variable declared with the let keyword exists but isn't yet initialized with a value. During this time, if we try to access the variable, we'll get a reference error because it's not yet ready for use.<br><br>
 In simpler terms, if we've declared a variable using let, but haven't assigned a value to it yet. During this "dead zone," attempting to use the variable will result in an error because it's like trying to use something before it's fully set up and ready to go.
+
+### Example of temporal dead zone
+
+![Screenshot (226)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/3371a87c-0be3-4b00-9bca-a09d1ea97bb2)
+
+In the above code , the let variable is initialized with a value in second line. So, anywhere before second line of code is considered as temporal dead zone of variable thala. Since , let variable is accessed after it is initialized with a value , we get desired result.
+
+![Screenshot (227)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/10fdf0a9-79d0-49ed-9b61-8b76d053f7e7)
+
+In this case , too the let variable is initialized with a value in second line of code. So, anywhere before second line is temporal dead zone and since we are accessing let variable from first line ( < second line of code) , we get a reference error as we are trying to access let variable from temporal dead zone.
