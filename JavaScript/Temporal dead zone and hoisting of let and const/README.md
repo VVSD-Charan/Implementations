@@ -64,3 +64,25 @@ Even though variables are of type let and var with same variable name , we get a
 Unlike let variables , var variables can be re-declared in same scope. It will not give us any syntax error and even though a variable names are same , if all of them are of var type then we donot get any error. We get an error only when atleast one of them in the same scope is let or const.
 
 ![Screenshot (232)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/9966418e-b92a-4101-9249-34fded9e76b0)
+
+# Similarities between let and const
+
+Like let variables , even const variables are not globally scoped. Memory allocation of let and const variables doesnot happen in global space, instead their memory allocation occurs in different scope.
+
+![Screenshot (233)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/f08ce7fa-5115-4879-b8c9-bbb38478ef0c)
+
+Even const variables have concept of temporal dead zone like let variables and works similarly as let in case of ereference errors.
+
+# Differences between let and const
+
+let variables can be declared first and can be initialized with a value later on. This will not throw any error.
+
+![Screenshot (234)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/18b0fa66-9884-438c-8260-63b5ba441e7d)
+
+But , in case of const variables , it is not possible. Const variables must be initialized with a value during declaration only.
+
+![Screenshot (235)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/de77e02d-e640-4b28-8598-39a81e5eafd8)
+
+![Screenshot (236)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/fb74b69d-607c-4a99-b121-b5aa61276403)
+
+This is the major difference between let and const as let variables can de initialized with a value later after initialization but it is not possible in the case of const variables.
