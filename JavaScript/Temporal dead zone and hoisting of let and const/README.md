@@ -33,4 +33,17 @@ In the above code , the let variable is initialized with a value in second line.
 
 ![Screenshot (227)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/10fdf0a9-79d0-49ed-9b61-8b76d053f7e7)
 
-In this case , too the let variable is initialized with a value in second line of code. So, anywhere before second line is temporal dead zone and since we are accessing let variable from first line ( < second line of code) , we get a reference error as we are trying to access let variable from temporal dead zone.
+In this case too , the let variable is initialized with a value in second line of code. So, anywhere before second line is temporal dead zone and since we are accessing let variable from first line ( < second line of code) , we get a reference error as we are trying to access let variable from temporal dead zone.
+
+# Cases when we encounter a reference error
+
+1) We get a reference error when we try to use a vriable that is no where present in the entire code. In this case , we get a reference error stating that the variable was not defined.
+
+![Screenshot (228)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/92943a56-5c89-4507-8fe7-c87560a8a387)
+
+2) When we try to access a let variable in temporal dead zone. In this case , the error states that the let variable cannot be accessed before it is initialized with a value.
+
+![Screenshot (229)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/380f57d2-762f-4cd9-a173-18742eedfad9)
+
+Although in both the cases , we get a reference error , the exact reason mentioned will be different. 
+
