@@ -86,3 +86,10 @@ But , in case of const variables , it is not possible. Const variables must be i
 ![Screenshot (236)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/fb74b69d-607c-4a99-b121-b5aa61276403)
 
 This is the major difference between let and const as let variables can de initialized with a value later after initialization but it is not possible in the case of const variables.
+
+# Type error in JavaScript
+
+Const variables must be initialized with a value during declaration , otherwise it would lead to syntax error. If we try to change the value of const variable , then we get a type error
+
+![Screenshot (237)](https://github.com/VVSD-Charan/Striver-A-Z-sheet-and-learning/assets/105978561/ae9945e2-d98c-4999-9ee2-47e5efd105d1)
+
